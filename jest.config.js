@@ -4,7 +4,7 @@ module.exports = {
     '.+\\.ts$': 'ts-jest'
   },
   clearMocks: true,
-  collectCoverage: true,
+  collectCoverage: false,
   collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
   coverageDirectory: 'coverage',
   coverageProvider: 'v8'
