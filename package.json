@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --passWithNoTests",
     "fix:lint": "npx eslint --ext .js,.ts . --fix",
-    "test:staged": "jest --passWithNoTests"
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
