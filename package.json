@@ -8,6 +8,11 @@
     "fix:lint": "npx eslint --ext .js,.ts . --fix",
     "prepare": "husky install"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
