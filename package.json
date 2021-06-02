@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --passWithNoTests",
-    "fix:lint": "./node_modules/.bin/eslint --fix",
+    "fix:lint": "npx eslint --ext .js,.ts . --fix",
     "test:staged": "jest --passWithNoTests"
   },
   "keywords": [],
