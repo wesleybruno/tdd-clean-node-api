@@ -115,6 +115,23 @@ describe('Signup Controller', () => {
     expect(httpResponse.body).toEqual(new InvalidParamError('email'))
   })
 
+  test('Should return 400 if password confirmation fails', () => {
+    const { sut } = makeSut()
+
+    const httpRequest = {
+      body: {
+        name: 'name',
+        email: 'email',
+        password: 'asd',
+        passwordConfirmation: 'asd123'
+      }
+    }
+
+    const httpResponse = sut.handle(httpRequest)
+    expect(httpResponse.statusCode).toBe(400)
+    expect(httpResponse.body).toEqual(new InvalidParamError('passwordConfirmation'))
+  })
+
   test('Should call email is valid', () => {
     const { sut, emailValidatorStub } = makeSut()
 
