@@ -8,6 +8,11 @@
     "fix:lint": "npx eslint --ext .js,.ts . --fix",
     "prepare": "husky install"
   },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "eslint . --fix", "git add"
+    ]
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
