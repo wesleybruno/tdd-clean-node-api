@@ -1,6 +1,6 @@
 import { AddAccount } from '../../domain/usecase/add-account'
 import { MissingParamError, InvalidParamError, ServerError } from '../errors'
-import { badRequest, internalServerError } from '../helpers'
+import { badRequest, internalServerError, ok } from '../helpers'
 import { EmailValidator, Controller, HttpRequest, HttpResponse } from '../protocols'
 export class SignUpController implements Controller {
   private readonly emailValidator: EmailValidator
@@ -38,10 +38,7 @@ export class SignUpController implements Controller {
         password
       })
 
-      return {
-        statusCode: 200,
-        body: account
-      }
+      return ok(account)
     } catch (error) {
       return internalServerError(new ServerError())
     }
