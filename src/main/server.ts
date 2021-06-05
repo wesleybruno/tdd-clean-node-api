@@ -1,4 +1,5 @@
 import express from 'express'
-
+import setupMiddlewares from './config/middlewares'
 const app = express()
-app.listen(5050, () => console.log('Server running at port 5050'))
+setupMiddlewares(app)
+export default app
