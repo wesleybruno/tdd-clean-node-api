@@ -1,2 +1,7 @@
-import app from './../server'
-app.listen(5050, () => console.log('Server running at port 5050'))
+import express from 'express'
+import setupMiddlewares from './middlewares'
+
+const app = express()
+setupMiddlewares(app)
+
+export default app
