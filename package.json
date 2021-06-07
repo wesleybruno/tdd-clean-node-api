@@ -1,7 +1,7 @@
 {
   "name": "node-ts-clean",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "NodeJs Rest Api using TDD - Clean and Typescript",
   "main": "index.js",
   "scripts": {
     "start": "sucrase-node ./src/main/server.ts",
@@ -20,7 +20,7 @@
     ]
   },
   "keywords": [],
-  "author": "",
+  "author": "Wesley Oliveira",
   "license": "ISC",
   "devDependencies": {
     "@shelf/jest-mongodb": "^1.2.5",
