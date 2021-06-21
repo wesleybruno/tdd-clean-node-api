@@ -129,6 +129,6 @@ describe('Login Controller', () => {
     const { sut } = makeSut()
 
     const result = await sut.handle(makeFakeRequest())
-    expect(result).toEqual(ok('any-token'))
+    expect(result).toEqual(ok({ accessToken: 'any-token' }))
   })
 })
