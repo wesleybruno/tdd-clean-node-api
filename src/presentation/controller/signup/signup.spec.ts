@@ -1,9 +1,9 @@
-import { AccountModel } from '../../domain/entity/account'
-import { AddAccount, AddAccountModel } from '../../domain/usecase/add-account'
-import { InvalidParamError, MissingParamError } from '../errors'
-import { badRequest, ok, serverError } from '../helpers'
-import { HttpRequest } from '../protocols'
-import { EmailValidator } from '../protocols/email-validator'
+import { AccountModel } from '../../../domain/entity/account'
+import { AddAccount, AddAccountModel } from '../../../domain/usecase/add-account'
+import { InvalidParamError, MissingParamError } from '../../errors'
+import { badRequest, ok, serverError } from '../../helpers'
+import { HttpRequest } from '../../protocols'
+import { EmailValidator } from '../../protocols/email-validator'
 import { SignUpController } from './signup-controller'
 
 interface SutType {
