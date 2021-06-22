@@ -1,7 +1,7 @@
 import { AccountModel } from '../../../domain/entity/account'
 import { AddAccount, AddAccountModel } from '../../../domain/usecase/add-account'
 import { badRequest, ok, serverError } from '../../helpers'
-import { Validation } from '../../helpers/validators/validation'
+import { Validation } from '../../protocols/validation'
 import { HttpRequest } from '../../protocols'
 import { SignUpController } from './signup-controller'
 
